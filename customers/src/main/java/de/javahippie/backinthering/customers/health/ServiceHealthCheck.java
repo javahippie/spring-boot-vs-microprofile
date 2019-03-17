@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg.health;
+package de.javahippie.backinthering.customers.health;
 
 import org.eclipse.microprofile.health.Health;
 import org.eclipse.microprofile.health.HealthCheck;

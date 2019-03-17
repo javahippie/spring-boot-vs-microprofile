@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg.secure;
+package de.javahippie.backinthering.customers.secure;
 
 import org.eclipse.microprofile.jwt.Claim;
 import org.eclipse.microprofile.jwt.ClaimValue;

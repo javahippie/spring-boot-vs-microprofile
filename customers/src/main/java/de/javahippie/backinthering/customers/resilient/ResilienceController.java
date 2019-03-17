@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg.resilient;
+package de.javahippie.backinthering.customers.resilient;
 
 import org.eclipse.microprofile.faulttolerance.Fallback;
 import org.eclipse.microprofile.faulttolerance.Timeout;

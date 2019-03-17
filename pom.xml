@@ -11,6 +11,6 @@
     <modules>
         <module>customers</module>
         <module>order</module>
-        <module>service</module>
+        <module>complaint</module>
     </modules>
 </project>

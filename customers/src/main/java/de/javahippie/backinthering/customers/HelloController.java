@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg;
+package de.javahippie.backinthering.customers;
 
 import javax.inject.Singleton;
 import javax.ws.rs.GET;

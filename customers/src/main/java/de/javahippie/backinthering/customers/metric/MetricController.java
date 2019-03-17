@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg.metric;
+package de.javahippie.backinthering.customers.metric;
 
 import org.eclipse.microprofile.metrics.Counter;
 import org.eclipse.microprofile.metrics.MetricUnits;

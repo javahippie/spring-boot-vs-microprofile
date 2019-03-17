@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg.config;
+package de.javahippie.backinthering.customers.config;
 
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;

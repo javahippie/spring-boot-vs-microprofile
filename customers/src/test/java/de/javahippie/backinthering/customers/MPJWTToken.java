@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg;
+package de.javahippie.backinthering.customers;
 
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;

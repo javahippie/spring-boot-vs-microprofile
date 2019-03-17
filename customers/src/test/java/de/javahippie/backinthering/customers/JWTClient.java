@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg;
+package de.javahippie.backinthering.customers;
 
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.RSASSASigner;
