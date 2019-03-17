@@ -6,7 +6,7 @@ This is a demo Repository for my Talk  ["Getting back in the ring! Comparing Ecl
 ## Structure
 This repository contains three projects, each containing one service.
 
-### Customer Service
+### de.javahippie.backinthering.complaint.customer.Customer Service
 A small Service exposing customer Data over HTTP. 
 
 ### Order Service

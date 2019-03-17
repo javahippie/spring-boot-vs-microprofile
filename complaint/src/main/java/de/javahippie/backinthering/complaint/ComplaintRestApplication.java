@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.customers;
+package de.javahippie.backinthering.complaint;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -7,5 +7,5 @@ import javax.ws.rs.core.Application;
  *
  */
 @ApplicationPath("/api")
-public class CustomerServiceRestApplication extends Application {
+public class ComplaintRestApplication extends Application {
 }

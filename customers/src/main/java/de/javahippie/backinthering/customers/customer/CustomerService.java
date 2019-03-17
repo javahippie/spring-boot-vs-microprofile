@@ -23,7 +23,6 @@ public class CustomerService {
     @Path("/{customerNumber}")
     public Response findCustomerByNumber(@PathParam("customerNumber") String customerNumber) {
         Optional<Customer> foundCustomer = repository.findByCustomerNumber(customerNumber);
-
         if (foundCustomer.isPresent()) {
             return Response.ok(foundCustomer.get()).build();
         } else {
