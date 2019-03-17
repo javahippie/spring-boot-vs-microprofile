@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.mp.dg;
+package de.javahippie.backinthering.customers;
 
 import org.eclipse.microprofile.auth.LoginConfig;
 
@@ -10,10 +10,10 @@ import javax.ws.rs.core.Application;
 /**
  *
  */
-@ApplicationPath("/data")
+@ApplicationPath("/api")
 
 @LoginConfig(authMethod = "MP-JWT", realmName = "jwt-jaspi")
 @DeclareRoles({"protected"})
 
-public class MpdgRestApplication extends Application {
+public class CustomerServiceRestApplication extends Application {
 }
