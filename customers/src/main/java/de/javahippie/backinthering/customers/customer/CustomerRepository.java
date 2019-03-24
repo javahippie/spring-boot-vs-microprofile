@@ -41,6 +41,13 @@ public class CustomerRepository {
     }
 
     public Optional<Customer> findByCustomerNumber(String customerNumber) {
+
+        try {
+            Thread.sleep(Double.valueOf(Math.random()*2000).intValue());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         return customers.stream()
                 .filter(customer -> customer.getCustomerNumber().equals(customerNumber))
                 .findFirst();

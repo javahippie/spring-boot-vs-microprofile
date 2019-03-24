@@ -1,7 +1,7 @@
 io.thorntail:elytron:jar:2.3.0.Final#/Users/zoeller/.m2/repository/io/thorntail/elytron/2.3.0.Final/elytron-2.3.0.Final.jar
 org.hdrhistogram:HdrHistogram:jar:2.1.9#/Users/zoeller/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar
-io.thorntail:ee:jar:2.3.0.Final#/Users/zoeller/.m2/repository/io/thorntail/ee/2.3.0.Final/ee-2.3.0.Final.jar
 org.apache.maven.resolver:maven-resolver-spi:jar:1.3.1#/Users/zoeller/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.3.1/maven-resolver-spi-1.3.1.jar
+io.thorntail:ee:jar:2.3.0.Final#/Users/zoeller/.m2/repository/io/thorntail/ee/2.3.0.Final/ee-2.3.0.Final.jar
 org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-spi:jar:2.0.0#/Users/zoeller/.m2/repository/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0/shrinkwrap-descriptors-spi-2.0.0.jar
 org.apache.maven:maven-resolver-provider:jar:3.6.0#/Users/zoeller/.m2/repository/org/apache/maven/maven-resolver-provider/3.6.0/maven-resolver-provider-3.6.0.jar
 org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-api-base:jar:2.0.0#/Users/zoeller/.m2/repository/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0/shrinkwrap-descriptors-api-base-2.0.0.jar

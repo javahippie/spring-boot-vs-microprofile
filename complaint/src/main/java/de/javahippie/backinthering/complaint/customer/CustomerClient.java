@@ -1,5 +1,6 @@
 package de.javahippie.backinthering.complaint.customer;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 import javax.annotation.PostConstruct;
@@ -7,16 +8,20 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Optional;
 
 @ApplicationScoped
 public class CustomerClient {
 
+    @Inject
+    @ConfigProperty(name = "customerservice.uri")
+    private String clientServiceUri;
+
     CustomerService customerService;
 
-    public CustomerClient() {
+    @PostConstruct
+    public void init() {
         try {
-            URI uri = new URI("http://localhost:8080/api");
+            URI uri = new URI(clientServiceUri);
             customerService = RestClientBuilder.newBuilder().baseUri(uri).build(CustomerService.class);
         } catch (URISyntaxException e) {
             e.printStackTrace();

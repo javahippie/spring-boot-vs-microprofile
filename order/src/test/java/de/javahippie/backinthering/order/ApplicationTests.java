@@ -1,4 +1,4 @@
-package de.javahippie.backinthering.boot.logistics;
+package de.javahippie.backinthering.order;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
