@@ -8,13 +8,13 @@ import javax.enterprise.context.ApplicationScoped;
 
 @Health
 @ApplicationScoped
-public class ServiceHealthCheck implements HealthCheck {
+public class ComplaintHealthCheck implements HealthCheck {
 
     @Override
     public HealthCheckResponse call() {
 
-        return HealthCheckResponse.named(ServiceHealthCheck.class.getSimpleName())
-                .withData("complaints", "/api/complaint")
+        return HealthCheckResponse.named(ComplaintHealthCheck.class.getSimpleName())
+                .withData("datapoint", "0.782")
                 .up()
                 .build();
 

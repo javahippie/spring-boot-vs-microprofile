@@ -1,9 +1,7 @@
 package de.javahippie.backinthering.complaint.complaint;
 
 import de.javahippie.backinthering.complaint.customer.Customer;
-import de.javahippie.backinthering.complaint.customer.CustomerClient;
-import org.eclipse.microprofile.faulttolerance.exceptions.TimeoutException;
-import org.eclipse.microprofile.opentracing.Traced;
+import de.javahippie.backinthering.complaint.customer.CustomerService;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -17,14 +15,13 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 @Path("/complaint")
-@Traced(false)
 public class ComplaintController {
 
     @Inject
     private ComplaintRepository repository;
 
     @Inject
-    private CustomerClient customerClient;
+    private CustomerService customerService;
 
     @GET
     @Produces("application/json")
@@ -36,20 +33,26 @@ public class ComplaintController {
 
     @POST
     public Response create(@QueryParam("caption") String caption, @QueryParam("content") String content, @QueryParam("customerNumber") String customerNumber) {
-        try {
-            Customer customer = customerClient.findByCustomerNumber(customerNumber);
-            if (customer != null) {
-                Complaint complaint = repository.createComplaint(caption, content, customer);
-                try {
-                    return Response.created(new URI("/complaint/" + complaint.getReference())).build();
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                }
-            }
-        } catch (TimeoutException ex) {
-            return Response.serverError().entity("The customer retrieval timed out").build();
+        Customer customer = customerService.findCustomerByNumber(customerNumber);
+        if (customer != null) {
+            Complaint complaint = repository.createComplaint(caption, content, customer);
+            return Response.created(constructCreationUri(complaint)).build();
+        } else {
+            return Response.serverError().build();
         }
-        return Response.serverError().build();
+    }
+
+    @GET
+    public Response findAll() {
+        return Response.ok(repository.getAll()).build();
+    }
+
+    private URI constructCreationUri(Complaint complaint) {
+        try {
+            return new URI("/complaint/" + complaint.getReference());
+        } catch (URISyntaxException e) {
+            return null;
+        }
     }
 
 }
