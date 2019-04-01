@@ -15,6 +15,7 @@
 .DS_Store
 *.iml
 **/.thorntail-runner-cache
+**/.idea
 
 # Package Files #
 *.jar
